@@ -4,14 +4,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
     <!--
-        Added the constraints for entity PledgePayment.
+        Added the constraints for entity Pledge.
     -->
-    <changeSet id="20220917091439-2" author="jhipster">
+    <changeSet id="20220917103103-2" author="jhipster">
 
-        <addForeignKeyConstraint baseColumnNames="pledge_id"
-                                 baseTableName="pledge_payment"
-                                 constraintName="fk_pledge_payment__pledge_id"
+        <addForeignKeyConstraint baseColumnNames="program_id"
+                                 baseTableName="pledge"
+                                 constraintName="fk_pledge__program_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="pledge"/>
+                                 referencedTableName="program"/>
     </changeSet>
 </databaseChangeLog>

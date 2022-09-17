@@ -7,27 +7,24 @@
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <!--
-        Added the entity Program.
+        Added the entity PledgePayment.
     -->
-    <changeSet id="20220917091139-1" author="jhipster">
-        <createTable tableName="program">
-            <column name="id" type="bigint" autoIncrement="true">
+    <changeSet id="20220917103203-1" author="jhipster">
+        <createTable tableName="pledge_payment">
+            <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="name" type="varchar(255)">
+            <column name="amount" type="${floatType}">
                 <constraints nullable="false" />
             </column>
-            <column name="min_amount" type="${floatType}">
+            <column name="date" type="date">
                 <constraints nullable="false" />
             </column>
-            <column name="description" type="varchar(255)">
+            <column name="member_name" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
-            <column name="start_date" type="date">
-                <constraints nullable="false" />
-            </column>
-            <column name="end_date" type="date">
-                <constraints nullable="false" />
+            <column name="pledge_id" type="bigint">
+                <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
@@ -43,18 +40,16 @@
           This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
           Spring Boot configuration key.
     -->
-    <changeSet id="20220917091139-1-data" author="jhipster" context="faker">
+    <changeSet id="20220917103203-1-data" author="jhipster" context="faker">
         <loadData
-                  file="config/liquibase/fake-data/program.csv"
+                  file="config/liquibase/fake-data/pledge_payment.csv"
                   separator=";"
-                  tableName="program"
+                  tableName="pledge_payment"
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
-            <column name="name" type="string"/>
-            <column name="min_amount" type="numeric"/>
-            <column name="description" type="string"/>
-            <column name="start_date" type="date"/>
-            <column name="end_date" type="date"/>
+            <column name="amount" type="numeric"/>
+            <column name="date" type="date"/>
+            <column name="member_name" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>
