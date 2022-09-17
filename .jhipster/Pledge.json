@@ -1,6 +1,6 @@
 {
   "applications": ["waciErp"],
-  "changelogDate": "20220917091339",
+  "changelogDate": "20220917103103",
   "dto": "no",
   "embedded": false,
   "entityTableName": "pledge",
