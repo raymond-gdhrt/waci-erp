@@ -33,9 +33,9 @@ spring:
       enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/waciErp
-    username: waciErp
-    password:
+    url: jdbc:postgres://eyhnwfdsbzprlb:3fa45151933e127476a7da9ccd91e009171e0b2b0d2e35b24239252773b0a1be@ec2-34-194-158-176.compute-1.amazonaws.com:5432/da5s2c32alblg9
+    username: eyhnwfdsbzprlb
+    password: 3fa45151933e127476a7da9ccd91e009171e0b2b0d2e35b24239252773b0a1be
     hikari:
       poolName: Hikari
       auto-commit: false
