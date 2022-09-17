@@ -1,0 +1,48 @@
+{
+  "applications": ["waciErp"],
+  "changelogDate": "20220917091139",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "program",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "minAmount",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Program",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "pledge",
+      "otherEntityRelationshipName": "program",
+      "relationshipName": "pledge",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

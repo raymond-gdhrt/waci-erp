@@ -1,0 +1,28 @@
+{
+  "waciErpApp": {
+    "pledge": {
+      "home": {
+        "title": "Pledges",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Pledge",
+        "createOrEditLabel": "Create or edit a Pledge",
+        "notFound": "No Pledges found"
+      },
+      "created": "A new Pledge is created with identifier {{ param }}",
+      "updated": "A Pledge is updated with identifier {{ param }}",
+      "deleted": "A Pledge is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Pledge {{ id }}?"
+      },
+      "detail": {
+        "title": "Pledge"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "date": "Date",
+      "memberName": "Member Name",
+      "program": "Program",
+      "pledgePayment": "Pledge Payment"
+    }
+  }
+}

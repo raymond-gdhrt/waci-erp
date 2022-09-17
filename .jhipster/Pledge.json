@@ -1,0 +1,44 @@
+{
+  "applications": ["waciErp"],
+  "changelogDate": "20220917091339",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "pledge",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "memberName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Pledge",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "program",
+      "otherEntityRelationshipName": "pledge",
+      "relationshipName": "program",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "pledgePayment",
+      "otherEntityRelationshipName": "pledge",
+      "relationshipName": "pledgePayment",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
