@@ -51,7 +51,7 @@ export const PledgeDetail = (props: RouteComponentProps<{ id: string }>) => {
           <dt>
             <Translate contentKey="waciErpApp.pledge.program">Program</Translate>
           </dt>
-          <dd>{pledgeEntity.program ? pledgeEntity.program.id : ''}</dd>
+          <dd>{pledgeEntity.program ? pledgeEntity.program.names : ''}</dd>
         </dl>
         <Button tag={Link} to="/pledge" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}
